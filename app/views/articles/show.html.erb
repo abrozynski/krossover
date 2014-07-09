@@ -1,18 +1,18 @@
-<p>
-  <strong>Goal Name:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Description:</strong>
-  <%= @article.text %>
-</p>
+	<p>
+	  <strong>Goal Name:</strong>
+	  <%= @article.title %>
+	</p>
+	 
+	<p>
+	  <strong>Description:</strong>
+	  <%= @article.text %>
+	</p>
 
-<h2>Coaches</h2>
+<p>Coaches</p>
 <%= render @article.comments %>
 
 
-<h2>Submit to this goal:</h2>
+<p>Submit to this goal:</p>
 <%= render "comments/form" %>
  
 <%= link_to 'Back', articles_path %>
