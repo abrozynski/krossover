@@ -1,0 +1,9 @@
+Documentation Questions
+
+- How do we added Authentication to specific applications? Basic authentication? http://guides.rubyonrails.org/getting_started.html#using-partials-to-clean-up-duplication-in-views
+
+- How to merge two different github repos?
+
+- Can we use Devise for creating different roles?
+
+- Tic Tac Toe game / Moves and controller structure?
