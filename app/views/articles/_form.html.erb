@@ -2,7 +2,7 @@
   <% if @article.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@article.errors.count, "error") %> prohibited
-      this article from being saved:</h2>
+      this goal from being saved:</h2>
     <ul>
     <% @article.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -21,6 +21,6 @@
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit "Submit Your Goal" %>
   </p>
 <% end %>

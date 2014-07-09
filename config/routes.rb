@@ -4,6 +4,10 @@
   # You can have the root of your site routed with "root"
   Blog::Application.routes.draw do
  
+  get 'sessions/new'
+
+  get 'users/new'
+
   resources :articles do
     resources :comments
   end
