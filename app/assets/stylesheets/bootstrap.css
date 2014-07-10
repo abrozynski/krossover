@@ -234,6 +234,11 @@ body {
   color: #333333;
   background-color: #ffffff;
   padding-top: 60px;
+
+}
+
+.goal-page {
+  padding-top: 60px
 }
 
 a {
@@ -745,7 +750,7 @@ h4,
 h5,
 h6 {
   margin: 10px 0;
-  font-family: inherit;
+  font-family: Helvetica;
   font-weight: bold;
   line-height: 20px;
   color: inherit;
@@ -761,36 +766,46 @@ h6 small {
   font-weight: normal;
   line-height: 1;
   color: #999999;
+
 }
 
 h1,
 h2,
 h3 {
-  line-height: 40px;
+  line-height: 60px;
+  padding-top: 90px
+
 }
 
 h1 {
   font-size: 38.5px;
+  font-family: futura; 
+  color: rgb(47, 47, 47);
 }
 
 h2 {
   font-size: 31.5px;
+  font-family: sans-serif;
 }
 
 h3 {
   font-size: 24.5px;
+  font-family: sans-serif;
 }
 
 h4 {
   font-size: 17.5px;
+  font-family: sans-serif;
 }
 
 h5 {
   font-size: 14px;
+  font-family: sans-serif;
 }
 
 h6 {
   font-size: 11.9px;
+  font-family: sans-serif;
 }
 
 h1 small {
@@ -4421,7 +4436,7 @@ input[type="submit"].btn.btn-mini {
    padding-top: 40px
   display: block;
   float: right;
-  padding: 15px 20px 10px;
+  padding: 40px 20px 10px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;

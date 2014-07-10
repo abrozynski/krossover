@@ -14,22 +14,33 @@
  *= require_self
  */
 
+#header {
+height: 50px;
+
+}
+
 #footerOuterSeparator{margin-top: 28px; height: 0px; background-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-top-width: 0px; border-top-style: solid;}
 
 #divFooter{background-color: rgb(21,106,175); color: rgb(255, 255, 255); font-family: Futura; text-transform: none; font-size: 12px; letter-spacing: 0px; line-height: 22px; text-align: center; background-image: -webkit-linear-gradient(top, rgb(21,106,175), rgb(21,106,175));}
 
 #divFooter{padding-top: 10px; background-image:-moz-linear-gradient(bottom,rgb(21,106,175),rgb(21,106,175));filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=rgb(21,106,175), endColorstr=rgb(21,106,175));background-image:-o-linear-gradient(bottom,rgb(21,106,175));background-image:-webkit-gradient(linear,left top, left bottom,from(rgb(21,106,175)),to(rgb(21,106,175)));background-image:-webkit-linear-gradient(bottom,rgb(21,106,175),rgb(21,106,175));background-image:linear-gradient(bottom,#ab0b00,#bf0d00);}
 
-#divFooter a{color: rgb(227, 227, 227); text-align: center; font-family: Futura; font-size: 12px; line-height: 22px;}
+#divFooter a{color: rgb(227, 227, 227); text-align: center; font-family: Futura; font-size: 12px; line-height: 22px; margin: 0 auto;}
 
-#divFooter h3{font-family: sans-serif; text-align: center; font-weight: 500; font-style: normal; font-size: 14px; line-height: 1.5em; color: rgb(227, 227, 227);}
+#divFooter h3{font-family: sans-serif; text-align: center; font-weight: 500; font-style: normal; font-size: 14px; line-height: 1.5em; color: rgb(227, 227, 227); margin: 0 auto}
 
 .footerArea {
     width:100%;
     height:80px;
     position:absolute;
     bottom:0;
-    left:0padding-top: 10px; text-align: center
+    left:20;
+    padding-top: 10px; 
+    text-align: center; 
+    padding-left: 50px;
+    margin: 0 auto;
+    display: block;
+    clear: both;
 }
 
 .divPanel {}
@@ -38,9 +49,12 @@
 
 .divPanel.nobottom {padding-bottom:0px}
 
-.copyright {position:relative;font-size:12px;letter-spacing:3px; padding-left:40px}
+.copyright {position:relative;font-size:12px;letter-spacing:1px; padding-right: 50px; display: inline-block;    
+vertical-align: middle; }
 
-.meter { 
+.social_bookmarks a {padding: 15px; font-size:smaller !important;text-transform:uppercase;letter-spacing:1px;text-decoration:none;margin-right:20px;}
+
+/*.meter { 
     height: 20px;  /* Can be anything */
     width: 250px;
     padding-bottom: 40px;
@@ -57,7 +71,7 @@
     box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
 }
 
-.meter > span {
+/*.meter > span {
     display: block;
     height: 100%;
        -webkit-border-top-right-radius: 8px;
@@ -118,7 +132,7 @@
         background-image: -ms-linear-gradient(top, #f1a165, #f36d0a);
         background-image: -o-linear-gradient(top, #f1a165, #f36d0a);
 }
-
+*/
 
 
 

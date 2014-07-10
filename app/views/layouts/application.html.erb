@@ -7,22 +7,38 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
+    <div id="header" class="navbar navbar-fixed-top">
         <div class="navbar-inner">
 
            <img src="http://www.krossover.com/wp-content/themes/swatch/images/assets/krossover-logo.png"> 
             <div class="container">
                 <a href="#" class="brand">Krossover Kredits</a>
             </div>
-                <div class="meter" id="orange">
+                <!-- <div class="meter" id="orange">
                     <span style="width: 25%"></span>
-                </div>
+                </div> -->
         </div>
     </div>
     <div class="container">
-        <%= yield %><br /><br />
-        
+        <%= yield %><br /><br />    
     </div>
+
+    <% if flash[:notice] %>
+        <div class="alert">
+            <button class="close" data-dismiss="alert">x</button>
+            <%= flash[:notice] %>
+        </div>
+    <%end%>
+
+     <% if flash[:notice] %>
+        <div class="notice">
+            <button class="close" data-dismiss="notice">x</button>
+            <%= flash[:notice] %>
+        </div>
+    <%end%>
+
+   
+
 </body>
 
 <div id="footerOuterSeparator"></div>
@@ -58,15 +74,17 @@
                     <a href='http://www.krossover.com/contact-us/'>Contact</a>
                 </div>
             </div>
+
             <br /><br />
             <div class="row-fluid">
                 <div class="col-xs-12 cold-sm-4">
                     <p class="copyright">
                  © Krossover Intelligence Inc. 2014
                  <a href="#"><i class="social foundicon-instagram"></i> Follow On Instagram</a>  
-                <a href="https://twitter.com/oswt"><i class="social foundicon-twitter"></i> Follow @Krossovr</a>  
+                <a href="https://twitter.com/oswt"><i class="social foundicon-twitter"></i> Follow Us On Twitter @Krossovr</a>  
                  <a href="#"><i class="social foundicon-facebook"></i> Like Us On Facebook</a>
                     </p>  
                 </div>
+            </div>
 
 </html>
