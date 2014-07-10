@@ -7,16 +7,66 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a href="#" class="brand">Krossover Kredits</a>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<%=	yield %><br /><br />
-		<em>Footer</em>
-	</div>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+
+           <img src="http://www.krossover.com/wp-content/themes/swatch/images/assets/krossover-logo.png"> 
+            <div class="container">
+                <a href="#" class="brand">Krossover Kredits</a>
+            </div>
+                <div class="meter" id="orange">
+                    <span style="width: 25%"></span>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+        <%= yield %><br /><br />
+        
+    </div>
 </body>
+
+<div id="footerOuterSeparator"></div>
+    <div id="divFooter" class="footerArea">
+        <div class="divPanel">
+            <div class="row-fluid">
+                </div>
+                <div class="span1" id="footerArea">
+                    <a href='http://www.krossover.com/'>Home</a>
+                </div>
+                <div class="span1" id="footerArea">
+                    <a href='http://www.krossover.com/siq/'>sIQ</a>
+                </div>
+                <div class="span1" id="footerArea">
+                    <a href='http://www.krossover.com/blog/'>Blog</a>
+                </div>
+                <div class="span1" id="footerArea">
+                    <a href='http://www.krossover.com/jobs/'>Jobs</a>
+                </div>
+                <div class="span1" id="footerArea">
+                    <a href='http://www.krossover.com/press/'> Press</a>
+                </div>
+                <div class="span1" id="footerArea">
+                    <a target='_blank' href='http://support.krossover.com/'> Support</a>
+                </div>
+                <div class="span2" id="footerArea">
+                    <a href='http://www.krossover.com/terms-conditions/'>Terms & Conditions</a>
+                </div>
+                <div class="span2" id="footerArea">
+                    <a href='http://www.krossover.com/privacy-policy/'>Privacy Policy</a>
+                </div>
+                <div class="span1" id="footerArea">
+                    <a href='http://www.krossover.com/contact-us/'>Contact</a>
+                </div>
+            </div>
+            <br /><br />
+            <div class="row-fluid">
+                <div class="col-xs-12 cold-sm-4">
+                    <p class="copyright">
+                 © Krossover Intelligence Inc. 2014
+                 <a href="#"><i class="social foundicon-instagram"></i> Follow On Instagram</a>  
+                <a href="https://twitter.com/oswt"><i class="social foundicon-twitter"></i> Follow @Krossovr</a>  
+                 <a href="#"><i class="social foundicon-facebook"></i> Like Us On Facebook</a>
+                    </p>  
+                </div>
+
 </html>
