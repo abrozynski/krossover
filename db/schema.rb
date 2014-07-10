@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140709221658) do
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20140710134222) do
+>>>>>>> 66174f281ab8aef550b09e09d38594494802d1bd
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -30,7 +32,9 @@ ActiveRecord::Schema.define(version: 20140709221658) do
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id"
 
-  create_table "models", force: true do |t|
+  create_table "users", force: true do |t|
+    t.string   "school_name"
+    t.string   "sport"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -45,15 +49,7 @@ ActiveRecord::Schema.define(version: 20140709221658) do
     t.datetime "updated_at"
   end
 
-  add_index "models", ["email"], name: "index_models_on_email", unique: true
-  add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
-
-  create_table "users", force: true do |t|
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
