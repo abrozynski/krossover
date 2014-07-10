@@ -40,3 +40,6 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'cancan'
+
+gem 'role_model'
