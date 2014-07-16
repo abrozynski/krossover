@@ -19,12 +19,6 @@
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-  <% if current_user.admin? %>
-   <div><%= f.label :kredits %>
-     <%= f.text_field :kredits %>
-  <% end %>
-
-
   <div><%= f.submit "Update" %></div>
 <% end %>
 
