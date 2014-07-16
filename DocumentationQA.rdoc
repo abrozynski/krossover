@@ -7,3 +7,14 @@ Documentation Questions
 - Can we use Devise for creating different roles?
 
 - Tic Tac Toe game / Moves and controller structure?
+
+
+
+http://www.morelightmorelight.com/2011/03/02/solving-git-detached-head/
+
+Git Code for Switching Back to Head
+git checkout -b the_wanderer
+git rebase master
+git checkout master
+git merge the_wanderer
+git commit
