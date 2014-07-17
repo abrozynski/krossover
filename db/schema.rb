@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20140715183518) do
   create_table "articles", force: true do |t|
     t.string   "title"
     t.string   "text"
+    t.string   "date"
     t.integer  "kredit"
     t.datetime "created_at"
     t.datetime "updated_at"
