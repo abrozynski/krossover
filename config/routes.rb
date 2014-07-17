@@ -4,10 +4,12 @@
   # You can have the root of your site routed with "root"
   Blog::Application.routes.draw do
  
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'registrations'}
   get 'sessions/new'
 
   get 'users/new'
+
+  get 'users/:id' => 'users#show'
 
   resources :articles do
     resources :comments

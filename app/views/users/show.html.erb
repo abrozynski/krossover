@@ -1,0 +1,15 @@
+<div class="user-page">
+    <p>
+	  <strong>Hello</strong>
+	  <%= @user.first_name %><%= @user.last_name %>
+	</p>
+	 
+	<p>
+	  <strong>Kredit:</strong>
+	  <%= @user.kredits %>
+	</p>
+<hr>
+<% if  current_user.admin? %>
+ <%= link_to 'Edit', edit_users_path(@user) %>
+<% end %>
+</div>

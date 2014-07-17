@@ -1,5 +1,24 @@
 <h1>Welcome to Krossover Kredits</h1>
-<%= link_to 'Atricles', controller: 'articles' %>
-<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
-<%= link_to 'sign in', new_user_session_path %>
-<%= link_to 'Register', new_user_registration_path %>
+
+<% if user_signed_in? == true %>
+    <p>
+	  <strong>Hello</strong>
+	  <%= current_user.first_name %><%= current_user.last_name %>
+	</p>
+	 
+	<p>
+	  <strong>Kredit:</strong>
+	  <%= current_user.kredits %>
+	</p>
+ <%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+
+<hr>
+<% else %>
+
+ <%= link_to 'Atricles', controller: 'articles' %>
+ <%= link_to 'sign in', new_user_session_path %>
+ <%= link_to 'Register', new_user_registration_path %>
+ <% if  current_user.admin? %>
+  <%= link_to 'Edit', edit_users_path(@user) %>
+ <% end %>
+<% end %>
