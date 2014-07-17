@@ -4,6 +4,8 @@
   # You can have the root of your site routed with "root"
   Blog::Application.routes.draw do
  
+  resources :rewards
+
   devise_for :users
   get 'sessions/new'
 
