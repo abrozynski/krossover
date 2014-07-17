@@ -5,6 +5,9 @@
   Blog::Application.routes.draw do
  
   devise_for :users, controllers: {registrations: 'registrations'}
+  resources :rewards
+
+#  devise_for :users
   get 'sessions/new'
 
   get 'users/new'

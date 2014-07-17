@@ -1,6 +1,6 @@
 <h1>Welcome to Krossover Kredits</h1>
-
-<% if user_signed_in? == true %>
+ 
+<!--<% if user_signed_in? == true %>
     <p>
 	  <strong>Hello</strong>
 	  <%= current_user.first_name %><%= current_user.last_name %>
@@ -22,3 +22,8 @@
   <%= link_to 'Edit', edit_users_path(@user) %>
  <% end %>
 <% end %>
+-->
+<%= link_to 'Challenges', controller: 'articles' %>
+<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+<%= link_to 'sign in', new_user_session_path %>
+<%= link_to 'Register', new_user_registration_path %>
