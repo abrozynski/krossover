@@ -1,0 +1,18 @@
+<h2>Refer a coach </h2>
+
+<%= form_for ([@referral]), :html => { :mulitpart => true } do |f| %>
+
+ 
+
+   <div> Coach's Last <%= f.label :name %><br />
+  <%= f.text_field :name %></div>
+
+  <div> Coach's <%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true %></div>
+
+
+  <div><%= f.submit "Refer This Coach" %></div>
+
+  <%= link_to 'Back', root_path %>
+  <%= link_to 'See All Referrals', referrals_path %>
+<% end %>

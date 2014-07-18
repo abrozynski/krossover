@@ -1,0 +1,18 @@
+<div class="goal-page">
+    <p>
+      <strong>Referral:</strong>
+      <%= @referral.name %>
+    </p>
+     
+    <p>
+      <strong>Description:</strong>
+      <%= @referral.email %>
+    </p>
+<hr>
+
+
+<!-- should be some type of information about latest with this referral -->
+
+<%= link_to 'Back', referrals_path %>
+| <%= link_to 'Edit', edit_referral_path(@referral) %>
+</div>
