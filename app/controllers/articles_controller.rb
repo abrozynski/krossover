@@ -8,6 +8,7 @@ def create
 	@article = Article.new(article_params)
 
 	if @article.save
+    #send email to referral email
 		redirect_to @article
 	else
 		render 'new'
