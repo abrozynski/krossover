@@ -5,9 +5,7 @@ class ReferralsController < ApplicationController
     end
 
     def create
-        
         @referral = Referral.new(referral_params)
-
         if @referral.save
           ReferralMailer.referral_confirmation(@referral).deliver
           redirect_to new_referral_path, notice: "Thanks for spreading the knowledge!"

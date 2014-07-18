@@ -14,7 +14,23 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.delivery_method = :smtp
+
+  YAML.load(File.read('config/local_env.yml')).each {|k, v|  ENV[k.to_s] = v}
+  
+  config.action_mailer.smtp_settings = {
+    address: ENV["EMAIL_REFERRAL_SENDER_ADDRESS"],
+    port: ENV["EMAIL_REFERRAL_SENDER_PORT"],
+    domain: ENV["EMAIL_REFERRAL_SENDER_DOMAIN"],
+    authentication: "login",
+    enable_starttls_auto: true,
+    user_name: ENV["EMAIL_REFERRAL_SENDER_USER_NAME"], 
+    password: ENV["EMAIL_REFERRAL_SENDER_PASSWORD"]  
+#these authentication needs to be modified 
+}
+  
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

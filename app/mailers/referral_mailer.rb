@@ -8,8 +8,8 @@ class ReferralMailer < ActionMailer::Base
   #
   def referral_confirmation(referral)
     @referral=referral
-    @greeting = "Hi"
+   
 
-    mail to: "referral.email", subject: "Coach #{@referral.name}, do you want to win more games?" #bcc: jaki@krossover.com
+    mail to: referral.email, subject: "Coach #{referral.name}, do you want to win more games?" #bcc: jaki@krossover.com
   end
 end
