@@ -18,13 +18,19 @@
 <nav id="header">
     <div id="header" class="navbar navbar-fixed-top">
         <div class="navbar-inner">
-
+           
            <img src="http://www.krossover.com/wp-content/themes/swatch/images/assets/krossover-logo.png"> 
+            
            <div>
             <ul id="headerbuttons" class="nav nav-pills">
               <li><a href="/articles">GOALS</a></li>
               <li><a href="/rewards">REWARDS</a></li>
+              
               <li><a href="/referrals/new">REFER A COACH</a></li>
+
+              
+              <li><a href="/referrals">REFERRALS</a></li>
+              
               <% if current_user.blank? %>
               <li class="active"><a href="/users/sign_in">SIGN IN</a></li>
               <%end%>
