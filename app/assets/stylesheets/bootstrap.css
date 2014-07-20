@@ -68,6 +68,7 @@ audio:not([controls]) {
 }
 
 html {
+  height: 100%;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -628,9 +629,10 @@ a:focus {
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1;
+    box-sizing: border-box;
+    min-height: 100%;  
+    padding: 0 0 100px;
+    position: relative;
 }
 
 .container:before,
