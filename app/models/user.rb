@@ -3,6 +3,14 @@ has_many :points
 has_many :badges , :through => :levels 
 has_many :levels  
 
+
+after_create :initialize_points
+
+def initialize_points
+  @point = Point.new(user_id: self.id, value: 0)
+  @point.save
+end
+
 def change_points(options)
   if Gioco::Core::KINDS
     points = options[:points]
@@ -58,12 +66,12 @@ end
 
 #  roles :admin, :coach, :guest
 
-  def award_kredit(amount)
-    self.kredit = self.kredit + amount
-  end
+#  def award_kredit(amount)
+ #   self.kredit = self.kredit + amount
+ # end
 
-  def deduct_kredit(amount)
-    self.kredit = self.kredit - amount
-  end
+  #def deduct_kredit(amount)
+   # self.kredit = self.kredit - amount
+  #end
 
 end
