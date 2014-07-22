@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140718171809) do
+ActiveRecord::Schema.define(version: 20140722171556) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
     t.string   "text"
     t.string   "date"
     t.integer  "kredit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "badges", force: true do |t|
+    t.string   "name"
+    t.integer  "kind_id"
+    t.integer  "points"
+    t.boolean  "default"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,6 +40,27 @@ ActiveRecord::Schema.define(version: 20140718171809) do
   end
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id"
+
+  create_table "kinds", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "levels", force: true do |t|
+    t.integer  "badge_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "points", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "kind_id"
+    t.integer  "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "referrals", force: true do |t|
     t.string  "name"
