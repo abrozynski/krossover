@@ -7,6 +7,7 @@
   devise_for :users, controllers: {registrations: 'registrations'}
   resources :rewards, :referrals
 
+  resources :articles, :path => "goals/"
 
 #  devise_for :users
   get 'sessions/new'
