@@ -18,6 +18,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
+
 #  YAML.load(File.read('config/local_env.yml')).each {|k, v|  ENV[k.to_s] = v}
   
   config.action_mailer.smtp_settings = {

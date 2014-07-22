@@ -18,3 +18,5 @@ git rebase master
 git checkout master
 git merge the_wanderer
 git commit
+
+-- Update config/environments/development.rb line 21 (YAML) when ready to push to github

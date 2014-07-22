@@ -58,6 +58,7 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.1)
+<<<<<<< HEAD
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.1)
@@ -65,6 +66,9 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.1)
       i18n (~> 0.5)
+=======
+    gioco (1.1.1)
+>>>>>>> 2ee5c71136660ace4793600a15e320eee1e8755e
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (2.1.2)
@@ -170,8 +174,12 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
+<<<<<<< HEAD
   factory_girl_rails
   faker
+=======
+  gioco
+>>>>>>> 2ee5c71136660ace4793600a15e320eee1e8755e
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.1.2)
