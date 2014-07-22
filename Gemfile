@@ -45,3 +45,11 @@ gem 'devise'
 gem 'cancan'
 
 gem 'role_model'
+
+gem 'rspec-rails', :group => [:development, :test]
+
+gem 'factory_girl_rails'
+
+gem 'faker'
+
+gem 'capybara', :group => :test
