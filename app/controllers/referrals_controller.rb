@@ -6,6 +6,7 @@ class ReferralsController < ApplicationController
 
     def create
         @referral = Referral.new(referral_params)
+        @referral.user_id = current_user.id
         if @referral.save
           ReferralMailer.referral_confirmation(@referral).deliver
           redirect_to new_referral_path, notice: "Thanks for spreading the knowledge!"
@@ -45,7 +46,7 @@ class ReferralsController < ApplicationController
 
     private
       def referral_params
-        params.require(:referral).permit(:name, :email, :id)
+        params.require(:referral).permit(:name, :email, :id, :user_id)
       end
 
 end
