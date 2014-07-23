@@ -46,7 +46,7 @@ class ReferralsController < ApplicationController
 
     private
       def referral_params
-        params.require(:referral).permit(:name, :email, :id, :user_id)
+        params.require(:referral).permit(:name, :last_name, :phone_number, :school, :sport, :email, :id, :user_id)
       end
 
 end
