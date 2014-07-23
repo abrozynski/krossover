@@ -6,17 +6,27 @@
 
 <table class="table">
   <tr>
-    <th>Coach's Name</th>
+    <th>First Name</th>
+    <th>Last Name</th>
     <th>Email</th>
+    <th>Phone Number</th>
+    <th>School</th>
+    <th>Sport</th>
+    <th>Referring Coach First Name</th>
+    <th>Referring Coach Last Name</th>
     <th colspan="2"></th>
   </tr>
  
   <% @referrals.each do |referral| %>
     <tr>
       <td><%= referral.name %></td>
+      <td><%= referral.last_name %></td>
       <td><%= referral.email %></td>
-      <td><%= referral.user_id %></td>
+      <td><%= referral.phone_number %></td>
+      <td><%= referral.school %></td>
+      <td><%= referral.sport %></td>
       <td><%= referral.user.try(:first_name) %></td>
+      <td><%= referral.user.try(:last_name) %></td>
       <td><%= link_to 'Show', referral_path(referral) %></td>
       <td><%= link_to 'Edit', edit_referral_path(referral) %></td>
       <td><%= link_to 'Destroy', referral, method: :delete, data: { confirm: 'Are you sure?' } %></td>
