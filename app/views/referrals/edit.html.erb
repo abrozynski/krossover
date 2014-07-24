@@ -4,11 +4,23 @@
 
  
 
-   <div> Coach's Last <%= f.label :name %><br />
+   <div> <%= f.label :First_Name %><br />
   <%= f.text_field :name %></div>
 
-  <div> Coach's <%= f.label :email %><br />
+   <div> <%= f.label :Last_Name %><br />
+  <%= f.text_field :name %></div>
+
+  <div> <%= f.label :Email %><br />
   <%= f.email_field :email, autofocus: true %></div>
+
+   <div><%= f.label :Phone_Number %><br />
+  <%= f.text_field :phone_number %></div>
+
+   <div> <%= f.label :School %><br />
+  <%= f.text_field :school %></div>
+
+   <div>  <%= f.label :Sport %><br />
+  <%= f.text_field :sport %></div>
 
 
   <div><%= f.submit "Update This Coach" %></div>
