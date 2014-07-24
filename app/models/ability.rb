@@ -8,17 +8,16 @@ class Ability
        #if user.admin?
        #  can :manage, :all
 
-      if user && user.role == admin?
+      if user.admin?
         can :access, :rails_admin       # only allow admin users to access Rails Admin
-        can :dashboard                  # allow access to dashboard
+        can :dashboard
+        can :manage, :all                  # allow access to dashboard
 
-       if user.role == user?
-         can :read, :all
-         can :manage, Comment
-#       if user.guest?
-#         can :read, Article
-       else
-         can :read, :all
+      else
+        cannot :access, :rails_admin       # only allow admin users to access Rails Admin
+        cannot :dashboard
+        cannot :create, Article
+
        end
     #
     # The first argument to `can` is the action you are giving the user 
