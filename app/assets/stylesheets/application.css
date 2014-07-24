@@ -20,11 +20,12 @@ height: 50px;
 }
 
 #headerbuttons {
-   display: table;
+    display: table;
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
-}
+    margin-right: 2em;
+    float: right;
+
 }
 
 #footerOuterSeparator{
@@ -137,6 +138,13 @@ vertical-align: middle;
    margin-right:20px;
  }
 
+ .navigational-buttons {
+  margin-top: -100px;
+ }
+
+#main-logo {
+  padding-bottom: 0px;
+}
 /*.meter { 
     height: 20px;  /* Can be anything */
     /*width: 250px;
