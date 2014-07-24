@@ -1,12 +1,17 @@
 <h1>Latest Goals</h1>
  
- <%= link_to 'Post new goal', new_article_path %>
+ <hr >
+ <p>In Krossover Kredits you can earn rewards on completed goals. See details below. </p>
+
+<hr >
 
 <table class="table">
   <tr>
     <th>Goal Name</th>
     <th>Description</th>
-    <th colspan="2"></th>
+    <th>Due Date</th>
+    <th>Kredits</th>
+    <th colspan="4"></th>
   </tr>
  
   <% @articles.each do |article| %>
@@ -16,9 +21,6 @@
       <td><%= article.date %></td>
       <td><%= article.kredit %></td>
       <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
-  <% end %>
+    <% end %>
 </table>

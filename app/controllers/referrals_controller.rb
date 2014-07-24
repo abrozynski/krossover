@@ -1,5 +1,8 @@
 class ReferralsController < ApplicationController
 
+  load_and_authorize_resource
+  skip_authorize_resource :only => [:new, :create, :update]
+
     def new
         @referral = Referral.new
     end
@@ -13,8 +16,7 @@ class ReferralsController < ApplicationController
         else
           render "new"
           #add message that referral has been generated 
-        end
-    end
+        end    end
 
     def show
         @referral = Referral.find(params[:id])

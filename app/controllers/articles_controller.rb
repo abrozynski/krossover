@@ -1,11 +1,15 @@
 class ArticlesController < ApplicationController
 
+  load_and_authorize_resource
+  skip_authorize_resource :only => [:index, :show]
+
 def new
 	@article = Article.new
 end
 
 def create
 	@article = Article.new(article_params)
+#  authorize! :create, @article
 
 	if @article.save
     #send email to referral email

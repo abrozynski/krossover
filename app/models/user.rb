@@ -64,7 +64,7 @@ end
 
 #  roles_attribute :roles_mask
 
- #  roles :admin, :coach, :guest
+#  roles :admin, :coach, :guest
 
 #  def award_kredit(amount)
  #   self.kredit = self.kredit + amount
