@@ -1,6 +1,5 @@
 <h1>Latest Goals</h1>
  
- <%= link_to 'Post new goal', new_article_path %>
 
 <table class="table">
   <tr>
@@ -16,9 +15,6 @@
       <td><%= article.date %></td>
       <td><%= article.kredit %></td>
       <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
-  <% end %>
+    <% end %>
 </table>
