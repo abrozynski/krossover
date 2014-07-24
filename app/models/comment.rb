@@ -4,7 +4,7 @@ class Comment < ActiveRecord::Base
   after_create :award_user
 
   def award_user
-  	 current_user.kredits += 5
+#  	 current_user.kredits += 5
   end
 
 end
