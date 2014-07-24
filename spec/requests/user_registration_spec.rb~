@@ -1,0 +1,13 @@
+require 'spec_helper'
+
+describe 'user registration' do
+  it 'allows new users to register' do
+    visit '/users/sign_up'
+
+    fill_in 'First Name', :with => {Faker::Name.first_name}
+    fill_in 'Last Name', :with => {Faker::Name.last_name}
+    fill_in 'Email', :with => {Faker::Internet.email}
+    fill_in 'School Name', :with => {Faker::Company.name}
+    fill_in 'Sport', :with => 'Basketball'
+    fill_in 'Password', :with => 'aaaaaaaa'
+    fill_in 'Confirm Password', :with => 'aaaaaaaa'
