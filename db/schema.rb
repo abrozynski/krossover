@@ -100,8 +100,8 @@ ActiveRecord::Schema.define(version: 20140724182401) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin",                  default: false
-    t.string   "role",                   default: "user"
     t.integer  "kredits",                default: 0
+    t.string   "role",                   default: "user"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
