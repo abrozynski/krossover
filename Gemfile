@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.2'
 # Use sqlite3 as the database for Active Record
@@ -58,3 +59,12 @@ gem 'faker'
 gem 'capybara', :group => :test
 
 gem 'rails_admin'
+
+group :development do
+	gem 'better_errors'
+	gem 'binding_of_caller'
+	gem 'pry-rails'
+	gem 'pry-stack_explorer'
+	gem 'pry-debugger'
+	gem 'annotate'
+end
