@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140729190741) do
+ActiveRecord::Schema.define(version: 20140729191118) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(version: 20140729190741) do
     t.integer "phone_number"
     t.string  "school"
     t.string  "sport"
+    t.integer "kredit",       default: 10
   end
 
   create_table "rewards", force: true do |t|
