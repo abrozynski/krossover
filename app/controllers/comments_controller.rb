@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
     
     if @comment.save
     #  current_user.kredits += @article.kredit
-        current_user.update_attributes( :kredits => (current_user.kredits + @article.kredit) )
+        current_user.update_attributes( :kredit => (current_user.kredit + @article.kredit) )
        redirect_to article_path(@article)  
     end
 
