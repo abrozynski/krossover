@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724182401) do
+ActiveRecord::Schema.define(version: 20140729133708) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 20140724182401) do
     t.integer  "kind_id"
     t.integer  "points"
     t.boolean  "default"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "claims", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "reward_id"
+    t.boolean  "approved"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -100,8 +108,8 @@ ActiveRecord::Schema.define(version: 20140724182401) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin",                  default: false
-    t.integer  "kredits",                default: 0
     t.string   "role",                   default: "user"
+    t.integer  "kredits",                default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
