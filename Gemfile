@@ -32,7 +32,7 @@ gem 'carrierwave'
 
 gem 'gioco'
 
-gem 'debugger'
+#gem 'debugger'
 
 
 
