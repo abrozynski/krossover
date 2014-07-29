@@ -28,7 +28,7 @@ def change_points(options)
     old_pontuation = self.points.to_i
   end
   new_pontuation = old_pontuation + points
-  Gioco::Core.sync_resource_by_points(self, new_pontuation, kind)
+q  Gioco::Core.sync_resource_by_points(self, new_pontuation, kind)
 end
 
 def next_badge?(kind_id = false)
