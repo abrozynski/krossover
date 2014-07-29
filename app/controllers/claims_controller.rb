@@ -1,9 +1,13 @@
 class ClaimsController < ApplicationController
 
 	def create
-	    @reward= Reward.find(params[:reward_id])
+	    @reward = Reward.find(params[:reward_id])
 	    @claim = @reward.claims.build(claim_params)
 	 	  @claim.user_id = current_user.id
+
+	 	  if @claim.save 
+	 	    redirect_to rewards_url
+	 	  end
 	end
 	 
 	def update
@@ -19,8 +23,8 @@ class ClaimsController < ApplicationController
 	end
 
 	private
-  def user_params
-    params.require(:user).permit(:kredit)
+  def claim_params
+    params.require(:claim).permit(:kredit, :user_id, :reward_id)
   end
 
 end

@@ -20,6 +20,11 @@
   resources :articles do
     resources :comments
   end
+
+  resources :rewards do
+    resources :claims
+  end
+  
  
   root 'welcome#index'
 end

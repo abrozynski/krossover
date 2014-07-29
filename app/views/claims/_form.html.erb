@@ -1,0 +1,9 @@
+<%= form_for([@reward, @reward.claims.build]) do |f| %>
+
+  <%= f.hidden_field :user_id, :value =>  current_user.id %>
+  <%= f.hidden_field :reward_id, :value =>  @reward.id %>
+  
+  <p>
+    <%= f.submit "Submit To This Reward" %>
+  </p>
+<% end %>

@@ -1,0 +1,15 @@
+<p>
+  <strong>Coach Name:</strong>
+  <%= claim. %>
+</p>
+ 
+<p>
+  <strong>claim:</strong>
+  <%= claim.body %>
+</p>
+
+<p>
+  <%= link_to 'Destroy claim', [claim.article, claim],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

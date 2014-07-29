@@ -17,9 +17,14 @@
 </p>
 
 <p>
-	<strong>Upload Image</strong>
+	<strong>Image</strong>
 	<%= image_tag(@reward.image_url, :width => 600) if @reward.image.present? %>
 	</p>
+
+<hr>
+<p>Get This Reward:</p>
+<%= render "claims/form" %>
+
 
 <%= link_to 'Back', rewards_path %>
 </div>
