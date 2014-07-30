@@ -6,7 +6,8 @@ class ClaimsController < ApplicationController
 	 	  @claim.user_id = current_user.id
 
 	 	  if @claim.save 
-	 	    redirect_to rewards_url
+	 	  	  ClaimMailer.claim_confirmation(@claim).deliver
+          redirect_to rewards_url, notice: "Congrats on earning your reward!"
 	 	  end
 	end
 	 
