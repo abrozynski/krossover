@@ -22,13 +22,13 @@ Rails.application.configure do
 
 #  YAML.load(File.read('config/local_env.yml')).each {|k, v|  ENV[k.to_s] = v}
 
-  # YAML.load(File.read('config/local_env.yml')).each {|k, v|  ENV[k.to_s] = v}
+YAML.load(File.read('config/environments/local_env.yml')).each {|k, v|  ENV[k.to_s] = v}
 
   
   config.action_mailer.smtp_settings = {
-    address: ENV["EMAIL_REFERRAL_SENDER_ADDRESS"],
-    port: ENV["EMAIL_REFERRAL_SENDER_PORT"],
-    domain: ENV["EMAIL_REFERRAL_SENDER_DOMAIN"],
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "gmail.com",
     authentication: "login",
     enable_starttls_auto: true,
     user_name: ENV["EMAIL_REFERRAL_SENDER_USER_NAME"], 

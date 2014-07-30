@@ -6,9 +6,11 @@ class ClaimMailer < ActionMailer::Base
   #
   #   en.referral_mailer.referral_confirmation.subject
   #
+  #
   def claim_confirmation(claim)
+    
     @claim = claim
-
-    mail to: @user.email, subject: "Coach, do you want to win more games?" #bcc: jaki@krossover.com
+    
+    mail to: "gary.spagnoli@gmail.com", subject: "Coach, do you want to win more games?" 
   end
 end

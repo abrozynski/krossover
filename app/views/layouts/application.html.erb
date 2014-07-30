@@ -56,17 +56,20 @@
 
 
     <div class="container">
-        <%= yield %><br /><br />    
+        <% if flash[:notice] %>
+          <div class="alert">
+              <button class="close" data-dismiss="alert">x</button>
+              <%= flash[:notice] %>
+          </div>
+        <%end%>
+
+        <!-- Here is the amazing content for each page -->
+        <%= yield %>
+          <br />    
     </div>
 
 
-    <% if flash[:notice] %>
-        <div class="alert">
-            <button class="close" data-dismiss="alert">x</button>
-            <%= flash[:notice] %>
-        </div>
-    <%end%>
-    <div class="push"> </div>
+<!--    <div class="push"> </div>-->
 
 
 

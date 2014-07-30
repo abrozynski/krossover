@@ -1,7 +1,7 @@
 class ReferralsController < ApplicationController
 
   load_and_authorize_resource
-  skip_authorize_resource :only => [:new, :create, :update]
+  skip_load_and_authorize_resource :only => [:new, :create, :update]
 
     def new
         @referral = Referral.new
@@ -48,7 +48,7 @@ class ReferralsController < ApplicationController
 
     private
       def referral_params
-        params.require(:referral).permit(:name, :last_name, :phone_number, :school, :sport, :email, :id, :user_id)
+        params.require(:referral).permit(:name, :last_name, :phone_number, :school, :sport, :email, :id, :user_id, :kredit)
       end
 
 end

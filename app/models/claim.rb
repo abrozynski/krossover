@@ -3,7 +3,7 @@ class Claim < ActiveRecord::Base
 	belongs_to :reward
 	after_save :approval
 
-	def approval
+	def approval 
 	  if self.approved?
 		  self.user.update_attributes( :kredit => 
 		  	(self.user.kredit - self.reward.kredit) )		 	
