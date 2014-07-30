@@ -14,6 +14,29 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+
+  config.action_mailer.delivery_method = :smtp
+
+
+
+#  YAML.load(File.read('config/local_env.yml')).each {|k, v|  ENV[k.to_s] = v}
+
+  YAML.load(File.read('config/environments/local_env.yml')).each {|k, v|  ENV[k.to_s] = v}
+
+  
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 465,
+    domain: "gmail.com",
+    authentication: "login",
+    enable_starttls_auto: true,
+    user_name: ENV["EMAIL_REFERRAL_SENDER_USER_NAME"], 
+    password: ENV["EMAIL_REFERRAL_SENDER_PASSWORD"],  
+    require_ssl: true
+  #these authentication needs to be modified 
+  }
+
+
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
@@ -62,7 +85,7 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
