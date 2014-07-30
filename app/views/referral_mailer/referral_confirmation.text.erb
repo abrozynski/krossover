@@ -1,6 +1,6 @@
-Hey Coach,
+Hey Coach <%= @referral.name%>,
 
-<p> Your friend Coach <%= @referral.name%> has a tip. Do you want to win more games this season and spend less time breaking down film? Let us break down the game for you, so you can get back to coaching. Take a look at our video analytics service at www.Krossover.com</p>
+<p>Coach <%= User.find(@referral.user_id).last_name %> recommended this to you. Do you want to win more games this season and spend less time breaking down film? Let us break down the game for you, so you can get back to coaching. Take a look at our video analytics service at www.Krossover.com</p>
 
 
 <br>
