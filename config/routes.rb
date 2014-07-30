@@ -8,14 +8,23 @@
   devise_for :users, controllers: {registrations: 'registrations'}
   resources :rewards, :referrals
 
+  resources :users, :only =>[:show]
+
   resources :articles, :path => "goals/"
 
-#  devise_for :users
   get 'sessions/new'
 
   get 'users/new'
 
   get 'users/:id' => 'users#show'
+
+=begin
+  devise_scope :user do
+    get "user/:id", to: "users#show"
+  end
+=end
+
+
 
   resources :articles do
     resources :comments

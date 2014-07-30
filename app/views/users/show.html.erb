@@ -1,19 +1,35 @@
 <div class="user-page">
-   
-   <br />
-   <br />
-   <br />
-   <br />
-   
-   <p>
-	  <strong>Hello</strong>
-	  	<%= current_user.first_name %><%= current_user.last_name %>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=237633513090070&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+   <h1><%= @user.first_name %> <%= @user.last_name %>
+	 </h1>
+	 <hr>
+	 <p>
+	  <strong>Current Kredits:</strong>
+	  <%= @user.kredit %>
 	</p>
-	 
-	<p>
-	  <strong>Kredit:</strong>
-	  <%= current_user.kredits %>
+	 <p>
+	  <strong>School:</strong>
+	  <%= @user.school_name %>
 	</p>
+	 <p>
+	  <strong>Sport:</strong>
+	  <%= @user.sport %>
+	</p>
+
+	<hr>
+
+<div class="fb-like" data-href="https://facebook.com/krossoverintelligence/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <hr>
 
 </div>

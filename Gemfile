@@ -65,6 +65,8 @@ gem 'rails_admin'
 
 gem 'rails_12factor', group: :production
 
+gem 'social-share-button'
+
 
 group :development do
 	gem 'better_errors'
