@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
 
-	load_and_authorize_resource
-	skip_authorize_resource :only => [:show]
+ skip_before_filter :authenticate_user!, :only => :show, :if => lambda { 
+    if params[:id]
+      @user = User.find(params[:id])
+      @user and @user.public?
+    else
+      false
+    end
+  }
 
   def new
 
