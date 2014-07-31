@@ -5,6 +5,8 @@ has_many :levels
 has_many :claims
 has_many :rewards, through: :claims
 
+mount_uploader :picture, ImageUploader
+
 
 after_create :initialize_points
 

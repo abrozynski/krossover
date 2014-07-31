@@ -12,17 +12,22 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
+    <div><%= f.label :picture %><br />
+  <%= f.file_field :picture %></div>
+
   <div><%= f.label :school_name %><br />
   <%= f.text_field :school_name %></div>
 
   <div><%= f.label :sport %><br />
-  <%= f.text_field :sport %></div>
+  <%= f.select :sport, options_for_select([["Basketball", "Basketball"], ["Volleyball","Volleyball"], ["Lacrosse","Lacrosse"], ["Football","Football"]])%></div>
 
   <div><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
