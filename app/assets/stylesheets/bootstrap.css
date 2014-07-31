@@ -629,8 +629,9 @@ a:focus {
 .container {
     box-sizing: border-box;
     min-height: 100%;  
-    padding: 0 0 100px;
+    padding: 0 0 150px;
     position: relative;
+    margin: 0 auto;
 }
 
 .container:before,
