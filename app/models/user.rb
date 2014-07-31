@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 has_many :points  
-has_many :badges , :through => :levels 
+has_many :badges, :through => :levels 
 has_many :levels
 has_many :claims
 has_many :rewards, through: :claims
