@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
- skip_before_filter :authenticate_user!, :only => :show, :if => lambda { 
+ skip_before_filter :authenticate_user!, :only => [:show, :index], :if => lambda { 
     if params[:id]
       @user = User.find(params[:id])
       @user and @user.public?
@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
   def index
   	@user = User.all
-  end
+  #   @feed = (@user).order(:kredit)
+  # end
 
 end

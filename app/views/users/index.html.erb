@@ -1,0 +1,28 @@
+<h1>User Leader Board</h1>
+ 
+ <hr >
+ <p>In Krossover Kredits you can earn rewards on completed goals. See details below. </p>
+
+<hr >
+
+<table class="table">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>School</th>
+    <th>Sport</th>
+    <th>Kredits</th>
+    <th colspan="4"></th>
+  </tr>
+ 
+  <% @user.each do |user| %>
+    <tr>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.school_name %></td>
+      <td><%= user.sport %></td>
+      <td><%= user.kredit %></td>
+      <td><%= link_to 'Show', user_path(user) %></td>
+    </tr>
+    <% end %>
+</table>

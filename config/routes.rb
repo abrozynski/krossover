@@ -8,7 +8,7 @@
   devise_for :users, controllers: {registrations: 'registrations'}
   resources :rewards, :referrals
 
-  resources :users, :only =>[:show]
+  resources :users, :only =>[:show, :index]
 
   resources :articles, :path => "goals/"
 
