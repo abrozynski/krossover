@@ -1,5 +1,5 @@
 <div class="goal-page">
-    <h1> Referral Details </h1>
+    <h1> Your Referral Submission </h1>
 
     <p>
       <strong>First Name:</strong>
@@ -31,15 +31,18 @@
       <%= @referral.sport %>
     </p>
 
-  
+     <p>
+    <strong>Thanks for spreading the knowledge!</strong>
+  </p>
 
+<br />
+<div>
+  <%= social_share_button_tag(@referral) %>
+</div>
 
-         
 <hr>
-
-
 <!-- should be some type of information about latest with this referral -->
 
-<%= link_to 'Back', referrals_path %>
-| <%= link_to 'Edit', edit_referral_path(@referral) %>
+<p><a href="/referrals/new" alt="Referral Page">Submit Another Referral!</a></p>
+
 </div>

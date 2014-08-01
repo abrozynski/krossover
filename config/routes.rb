@@ -24,6 +24,8 @@
   end
 =end
 
+  resources :comments
+  resources :claims
 
 
   resources :articles do

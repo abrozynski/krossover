@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require social-share-button
+
 
  */
 
@@ -25,6 +27,12 @@ height: 50px;
     margin-left: auto;
     margin-right: 2em;
     float: right;
+}
+
+#footerbuttons {
+    text-align: center;
+    margin: 0 auto;
+    float: center;
 }
 
 #footerOuterSeparator{
@@ -89,7 +97,7 @@ height: 50px;
     left: 0;
     position: relative;
     width: 100%;
-    padding-left: 50px;
+    padding-left: 0px;
 
     /*width:100%;
     height: 142px;
@@ -135,6 +143,7 @@ height: 50px;
 
 #main-logo {
   padding-bottom: 0px;
+  max-width: 290px;
 }
 /*.meter { 
     height: 20px;  /* Can be anything */
@@ -216,7 +225,9 @@ height: 50px;
 }
 */
 
-
+footer {
+  display: flex;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

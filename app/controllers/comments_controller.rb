@@ -13,12 +13,14 @@ class CommentsController < ApplicationController
     if @comment.save
     #  current_user.kredits += @article.kredit
         current_user.update_attributes( :kredit => (current_user.kredit + @article.kredit) )
-       redirect_to article_path(@article)  
+       redirect_to comment_path(@comment)  
     end
-
   end
 
-
+  
+  def show
+    @comment = Comment.find(params[:id])
+  end
  
   def destroy
     @article = Article.find(params[:article_id])

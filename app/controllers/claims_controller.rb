@@ -7,7 +7,8 @@ class ClaimsController < ApplicationController
 
 	 	  if @claim.save 
 	 	  	  ClaimMailer.claim_confirmation(@claim).deliver
-          redirect_to rewards_url, notice: "Congrats on earning your reward!"
+          #redirect_to rewards_url, notice: "Congrats on earning your reward!"
+          redirect_to claim_path(@claim)  
 	 	  end
 	end
 	 

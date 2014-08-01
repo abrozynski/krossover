@@ -1,0 +1,19 @@
+<div class="goal-page">
+   <p>
+	  <strong>Commenter Name:</strong>
+	  <%= @comment.commenter %>
+	</p>
+	 
+	<p>
+	  <strong>Comment:</strong>
+	  <%= @comment.body %>
+	</p>
+
+<br />
+<div>
+	<%= social_share_button_tag(@comment.body) %>
+</div>
+
+<hr>
+ <%= link_to 'Back to the Goals', articles_path %>
+</div>

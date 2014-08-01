@@ -12,7 +12,7 @@ class ReferralsController < ApplicationController
         @referral.user_id = current_user.id
         if @referral.save
           ReferralMailer.referral_confirmation(@referral).deliver
-          redirect_to new_referral_path, notice: "Thanks for spreading the knowledge!"
+          redirect_to referral_path(@referral), notice: "Thanks for spreading the knowledge!"
         else
           render "new"
           #add message that referral has been generated 

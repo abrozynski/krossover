@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Krossover Kredits</title>
+  <title>Krossover Kredit</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,16 +9,11 @@
 <body>
 
 
-
-
-<!-- old header  -->
-
 <nav id="header">
     <div id="header" class="navbar navbar-fixed-top">
         <div class="navbar-inner">
-           
-           <a href="/"><img id="main-logo" src="http://i.imgur.com/XXbGa8X.png" alt="Krossover Kredits"> </a>
-            
+          <a href="/">
+            <img id="main-logo" src="http://i.imgur.com/XXbGa8X.png" alt="Krossover Kredits"></a>
            <div class="navigational-buttons">
             <ul id="headerbuttons" class="nav nav-pills">
               <% if current_user.present?%>
@@ -26,29 +21,16 @@
               <%end %>
               <li><a href="/goals">GOALS</a></li>
               <li><a href="/rewards">REWARDS</a></li>
-              
-              <li><a href="/referrals/new">REFER A COACH</a></li>
-
-              
-<!--              <li><a href="/referrals">REFERRALS</a></li>-->
-              
+              <li><a href="/referrals/new">REFER A COACH</a></li>           
               <% if current_user.blank? %>
-              <li class="active"><a href="/users/sign_in">SIGN IN</a></li>
+              <li><a href="/users/sign_in">SIGN IN</a></li>
               <%end%>
               <% if current_user.present?%>
-              <li class="active"> <a data-method="delete" href="/users/sign_out" rel="nofollow">SIGN OUT</a></li>
+              <li> <a data-method="delete" href="/users/sign_out" rel="nofollow">SIGN OUT</a></li>
               <% end %>
             </ul>
 
             </div>
-            
-           <!--  <div class="container">
-                <a href="#" class="brand">Krossover Kredits</a>
-            </div> -->
-<!-- uncomment this for the kredit kounter -->
-                <!-- <div class="meter" id="orange">
-                    <span style="width: 25%"></span>
-                </div> -->
         </div>
     </div>
 </nav>
@@ -80,67 +62,16 @@
 
 
 
-<div id="divFooter" class="footerArea">
-    
-    <div class="divPanel">
-    
-        <div class="row-fluid">
-    
-      
-                <div class="span1" id="footerArea">
-                    <a href='http://www.krossover.com/'>HOME</a>
-                </div>
+  <footer id="divFooter" class="footerArea">
+    <ul id="footerbuttons" class="nav nav-pills">
+        <li><a href="http://krossover.com">© KROSSOVER INTELLIGENCE INC. 2014</a></li>
+        <li><a href='/'>HOME</a></li>
+        <li><a href='http://www.krossover.com/blog/'>BLOG</a></li>
+        <li><a href='http://www.krossover.com/terms-conditions/'>TERMS & CONDITIONS</a></li>
+        <li><a href='http://www.krossover.com/privacy-policy/'>PRIVACY POLICY</a></li>
+        <li><a href='http://www.krossover.com/contact-us/'>CONTACT</a></li>
+    </ul>
+<!-- copyright under footer -->
+  </footer>
 
-                <div class="span1" id="footerArea">
-                    <a href='http://www.krossover.com/siq/'>SIQ</a>
-                </div>
-
-                <div class="span1" id="footerArea">
-                    <a href='http://www.krossover.com/blog/'>BLOG</a>
-                </div>
-
-                <div class="span1" id="footerArea">
-                    <a href='http://www.krossover.com/jobs/'>JOBS</a>
-                </div>
-
-                <div class="span1" id="footerArea">
-                    <a href='http://www.krossover.com/press/'> PRESS</a>
-                </div>
-
-                <div class="span1" id="footerArea">
-                    <a target='_blank' href='http://support.krossover.com/'> SUPPORT</a>
-                </div>
-
-                <div class="span2" id="footerArea">
-                    <a href='http://www.krossover.com/terms-conditions/'>TERMS & CONDITIONS</a>
-                </div>
-
-                <div class="span2" id="footerArea">
-                    <a href='http://www.krossover.com/privacy-policy/'>PRIVACY POLICY</a>
-                </div>
-
-                <div class="span1" id="footerArea">
-                    <a href='http://www.krossover.com/contact-us/'>CONTACT</a>
-                </div>
-    </div>
-
-        <br>
-<!-- 
-            copyright under footer -->
-
-            <div class="row-fluid">
-
-                <div class="col-xs-12 cold-sm-4">
-                    <p class="copyright">
-
-                 © KROSSOVER INTELLIGENCE INC. 2014
-
-                 <a href="#"><i class="social foundicon-instagram"></i> FOLLOW ON INSTAGRAM</a>  
-                <a href="https://twitter.com/oswt"><i class="social foundicon-twitter"></i> FOLLOW US ON TWITTER @KROSSOVR</a>  
-                 <a href="#"><i class="social foundicon-facebook"></i>LIKE US ON FACEBOOK</a>
-                    </p>  
-                </div>
-            </div>
-        </div>
-    </div>
 </html>

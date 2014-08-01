@@ -4649,7 +4649,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a {
   float: none;
-  padding: 10px 65px 10px;
+  padding: 0px 35px 10px;
   padding-left: 20px;
   color: rgb(47, 47, 47);
   font-family: Futura;
@@ -4659,8 +4659,7 @@ input[type="submit"].btn.btn-mini {
   text-align: center;
   margin: 0 auto;
   font-size: 1.2em;
-  
-}
+
 }
 
 .navbar .nav .dropdown-toggle .caret {
@@ -4669,7 +4668,8 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-  color: #333333;
+  font-size: 1.4em;
+  color: #fb4428;
   text-decoration: none;
   background-color: transparent;
 }
