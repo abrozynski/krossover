@@ -11,6 +11,6 @@ class ClaimMailer < ActionMailer::Base
     
     @claim = claim
     
-    mail to: "jaki@krossover.com", subject: "Claim for a Reward Made On KrossoverKredit.com" 
+    mail to: "gary.spagnoli@gmail.com", subject: "Claim for a Reward Made On KrossoverKredit.com" 
   end
 end

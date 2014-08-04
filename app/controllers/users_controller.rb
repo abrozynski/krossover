@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def index
-  	@user = User.all.order(kredit: :desc).take(10)
+  	@user = User.all.order(cumulative_kredit: :desc).take(10)
   end
 
    

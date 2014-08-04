@@ -11,7 +11,7 @@
     <th>Last Name</th>
     <th>School</th>
     <th>Sport</th>
-    <th>Kredits</th>
+    <th>Total Kredits</th>
     <th colspan="4"></th>
   </tr>
  
@@ -21,7 +21,7 @@
       <td><%= user.last_name %></td>
       <td><%= user.school_name %></td>
       <td><%= user.sport %></td>
-      <td><%= user.kredit %></td>
+      <td><%= user.cumulative_kredit %></td>
       <td><%= link_to 'Show', user_path(user) %></td>
     </tr>
     <% end %>
