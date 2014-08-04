@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
     @comment = @article.comments.build(comment_params)
 
     @comment.user_id = current_user.id
+    @comment.commenter = current_user.first_name + " " + current_user.last_name
     
     if @comment.save
     #  current_user.kredits += @article.kredit
