@@ -4,6 +4,7 @@ class ClaimsController < ApplicationController
 	    @reward = Reward.find(params[:reward_id])
 	    @claim = @reward.claims.build(claim_params)
 	 	  @claim.user_id = current_user.id
+	 	  @claim.user_last_name = current_user.last_name
 
 	 	  if @claim.save 
 	 	  	  ClaimMailer.claim_confirmation(@claim).deliver
@@ -26,7 +27,7 @@ class ClaimsController < ApplicationController
 
 	private
   def claim_params
-    params.require(:claim).permit(:kredit, :user_id, :reward_id)
+    params.require(:claim).permit(:kredit, :user_id, :user_last_name, :reward_id)
   end
 
 end
