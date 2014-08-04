@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    	@user = User.find(params[:id])
+    	@user = User.friendly.find(params[:id])
       # @feed= (Article.all + Comment.all).sort!{|a,b| a.updated_at <=> b.updated_at}.reverse.take(10)
 
       comments = Comment.all

@@ -7,6 +7,8 @@ has_many :rewards, through: :claims
 
 mount_uploader :picture, ImageUploader
 
+extend FriendlyId
+friendly_id :last_name, use: :slugged
 
 after_create :initialize_points
 
