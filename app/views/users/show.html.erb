@@ -10,11 +10,13 @@
 
    <h1><%= @user.first_name %> <%= @user.last_name %>
 	 </h1>
-	 <hr>
-     <p>
-      
+
+    <div class="user-image">      
          <%= image_tag(@user.picture_url, :width => 600) if @user.picture.present? %>
-    </p>
+         <%= image_tag("avatar.png", :width => 600) if @user.picture.blank? %>
+    </div>
+
+	 <hr>
 
 	
 	 <p>
@@ -29,19 +31,26 @@
       <strong>Current Kredits:</strong>
       <%= @user.kredit %>
     </p>
+  <p>
+      <strong>Total Lifetime Kredits:</strong>
+      <%= @user.cumulative_kredit %>
+  </p>
 
-   
-         <p>
-        <% @feed.each do |f| %>
-        <p>
-            <%= f['feed_text'] %>
-        </p>
-        <% end %>
+   <table class="table">
 
-         </p>
+          <tr>
+            <th>News Feed</th>
+          </tr>
 
+            <% @feed.each do |f| %>
+          
+          <tr>
+            <td><%= link_to f['feed_text'], f['link']  %></td>
+          </tr>
+      
+      <% end %>
 
-
+       </table>
 
     
  

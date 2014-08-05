@@ -2,3 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.user-image {
+	float: right;
+}
+
+.user-image img {
+	padding: 30px 30px 30px 30px;
+	max-width: 150px;
+	max-height: 150px;
+	border-radius: 50%;
+}

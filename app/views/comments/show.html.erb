@@ -1,4 +1,10 @@
 <div class="goal-page">
+   
+  <p>
+		<strong>Goal Submitted To</strong>
+		<%= Article.find(@comment.article_id).title %>
+	</p>
+
    <p>
 	  <strong>Commenter Name:</strong>
 	   <%= current_user.first_name %> <%= current_user.last_name %>
@@ -8,6 +14,7 @@
 	  <strong>Comment:</strong>
 	  <%= @comment.body %>
 	</p>
+
 
 <br />
 <div>

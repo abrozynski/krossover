@@ -22,6 +22,7 @@ class UsersController < ApplicationController
       comments.each do |f|
         comment_info ={}
         comment_info['feed_text'] = f.commenter + ' submitted to a goal'
+        comment_info['link'] = '../comments/' + f.id.to_s
         comment_info['time_stamp'] = f.updated_at
         comments_array<<comment_info
       end
@@ -32,6 +33,7 @@ class UsersController < ApplicationController
         article_info ={}
         article_info['feed_text']='A new goal has been created:' + f.title
         article_info['time_stamp']=f.created_at
+        article_info['link'] = '../goals/' + f.id.to_s
         articles_array<<article_info
       end
 
