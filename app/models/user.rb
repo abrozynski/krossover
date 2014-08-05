@@ -8,9 +8,17 @@ has_many :rewards, through: :claims
 mount_uploader :picture, ImageUploader
 
 extend FriendlyId
-friendly_id :last_name, use: :slugged
+friendly_id :slug_candidates, use: :slugged
 
 after_create :initialize_points
+
+def slug_candidates
+    [
+      :last_name,
+      [:last_name, :first_name],
+      [:last_name, :first_name, :school_name]
+    ]
+end
 
 def initialize_points
   @point = Point.new(user_id: self.id, value: 0)
