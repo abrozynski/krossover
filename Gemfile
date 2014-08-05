@@ -64,6 +64,8 @@ gem 'rails_12factor', group: :production
 
 gem 'social-share-button'
 
+gem 'social-buttons', '~> 0.3'
+
 gem 'ckeditor'
 
 gem 'simple_form'

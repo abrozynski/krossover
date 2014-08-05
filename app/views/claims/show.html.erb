@@ -1,11 +1,14 @@
 <div class="goal-page">
-   <p>
-	  <strong>Thank you for submitting. We are reviewing and will let you know shortly once you've won your reward.</strong>
-	</p>
+   <h4>
+Thank you for submitting. <br>We are reviewing and will let you know shortly once you've won your reward.</h4>
 
 <br />
 <div>
-	<%= social_share_button_tag(@claim) %>
+	<%= tweet_button(text: 'I just claimed a reward on Krossover Kredit!', via: 'krossovr', url: 'krossoverkredit.com') %>
+</div>
+<br>
+<div>
+	<%= like_button(237633513090070) %>
 </div>
 
 <hr>
