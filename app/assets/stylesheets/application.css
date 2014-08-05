@@ -229,6 +229,28 @@ footer {
   display: flex;
 }
 
+.introduction {
+  line-height: 40px;
+  float: left;
+  max-width: 70%;
+}
+
+.intro-paragraph {
+  line-height: 30px;
+}
+
+.intro-list {
+  line-height: 30px;
+}
+
+.sign-in-intro {
+  float: right;
+  max-width: 30%;
+  margin-top: 17px;
+}
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

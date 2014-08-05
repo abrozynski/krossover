@@ -5,12 +5,13 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
 
-  	def new
+  def new
+	
 	end
 
 	def create
   	render plain: params[:article].inspect
 	end
-
+	
 end
 

@@ -775,7 +775,7 @@ h6 small {
 h1,
 h2,
 h3 {
-  line-height: 60px;
+  line-height: 35px;
   padding-top: 1em;
 
 }
@@ -788,22 +788,22 @@ h1 {
 
 h2 {
   font-size: 31.5px;
-  font-family: sans-serif;
+  font-family: futura;
 }
 
 h3 {
   font-size: 24.5px;
-  font-family: sans-serif;
+  font-family: futura;
 }
 
 h4 {
   font-size: 17.5px;
-  font-family: sans-serif;
+  font-family: futura;
 }
 
 h5 {
   font-size: 14px;
-  font-family: sans-serif;
+  font-family: futura;
 }
 
 h6 {
@@ -3983,7 +3983,7 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #fb4428;
+  background-color: #1b68a8;
 }
 
 .nav > li > a > img {

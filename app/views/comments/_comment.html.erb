@@ -1,15 +1,14 @@
 <p>
-  <strong>Your Name:</strong>
+  Coach Name:<br>
   <%= comment.commenter %>
 </p>
  
 <p>
-  <strong>Your Blog Post:</strong>
-  <%= comment.body %>
+Coach Submission:<br>  <%= comment.body %>
 </p>
 
 <p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
+  <%= link_to 'Delete Submission', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>

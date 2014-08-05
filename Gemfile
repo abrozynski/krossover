@@ -66,6 +66,8 @@ gem 'social-share-button'
 
 gem 'ckeditor'
 
+gem 'simple_form'
+
 
 group :development do
 	gem 'better_errors'
