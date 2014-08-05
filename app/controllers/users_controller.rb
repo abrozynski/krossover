@@ -22,7 +22,7 @@ class UsersController < ApplicationController
       comments.each do |f|
         comment_info ={}
         comment_info['feed_text'] = f.commenter + ' submitted to a goal'
-        comment_info['time_stamp']=f.updated_at
+        comment_info['time_stamp'] = f.updated_at
         comments_array<<comment_info
       end
 

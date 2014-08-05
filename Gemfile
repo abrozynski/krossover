@@ -64,6 +64,8 @@ gem 'rails_12factor', group: :production
 
 gem 'social-share-button'
 
+gem 'ckeditor'
+
 
 group :development do
 	gem 'better_errors'

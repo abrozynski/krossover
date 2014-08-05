@@ -18,6 +18,8 @@
 
   get 'users/:id' => 'users#show'
 
+  mount Ckeditor::Engine => '/ckeditor'
+
 =begin
   devise_scope :user do
     get "user/:id", to: "users#show"
