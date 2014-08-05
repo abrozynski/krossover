@@ -17,7 +17,7 @@
            <div class="navigational-buttons">
             <ul id="headerbuttons" class="nav nav-pills">
               <% if current_user.present?%>
-              <li> <%= link_to "YOUR PROFILE", user_path(current_user.id) %></li>
+              <li> <%= link_to "YOUR PROFILE", user_path(current_user.slug) %></li>
               <%end %>
               <li><a href="/goals">GOALS</a></li>
               <li><a href="/rewards">REWARDS</a></li>
