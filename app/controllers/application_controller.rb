@@ -5,13 +5,16 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
 
-  def new
-	
+  	def new
 	end
 
 	def create
   	render plain: params[:article].inspect
 	end
-	
+
+# def after_sign_in_path_for(resource)
+#   redirect_to user_path(users) #your path
+# end
+
 end
 
