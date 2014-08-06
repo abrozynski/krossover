@@ -12,9 +12,9 @@ class ApplicationController < ActionController::Base
   	render plain: params[:article].inspect
 	end
 
-# def after_sign_in_path_for(resource)
-#   redirect_to user_path(users) #your path
-# end
-
+    def after_sign_in_path_for(resource_or_scope)
+        '/users/' + current_user.slug
+    end
+   
 end
 

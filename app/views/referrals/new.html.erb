@@ -25,7 +25,8 @@
   <%= f.text_field :school %></div>
 
    <div>  <%= f.label :Sport %><br />
-  <%= f.text_field :sport %></div>
+  <%= f.select :sport, options_for_select([["Basketball", "Basketball"], ["Volleyball","Volleyball"], ["Lacrosse","Lacrosse"], ["Football","Football"]])%>
+</div>
 
 
 
@@ -33,7 +34,7 @@
 
 
 <p>  <%= link_to 'Back', root_path %></p>
-<p> <%= link_to 'See All Referrals', referrals_path %></p>
+
 <% end %>
 
 
