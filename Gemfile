@@ -72,6 +72,8 @@ gem 'simple_form'
 
 gem 'friendly_id', '~> 5.0.0'
 
+gem 'closeio'
+
 
 group :development do
 	gem 'better_errors'

@@ -11,8 +11,10 @@ class ReferralsController < ApplicationController
         @referral = Referral.new(referral_params)
         @referral.user_id = current_user.id
         if @referral.save
+          current_user.update_attributes( :kredit => (current_user.kredit + 10), 
+          :cumulative_kredit => (current_user.kredit + 10) )
           ReferralMailer.referral_confirmation(@referral).deliver
-          redirect_to referral_path(@referral), notice: "Thanks for spreading the knowledge!"
+          redirect_to user_path(current_user), notice: "Thanks for spreading the knowledge!"
         else
           render "new"
           #add message that referral has been generated 

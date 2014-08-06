@@ -52,3 +52,9 @@ test:
   encoding: unicode
   database: krossover
   pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: krossover
+  pool: 5
