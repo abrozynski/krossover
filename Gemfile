@@ -72,7 +72,12 @@ gem 'simple_form'
 
 gem 'friendly_id', '~> 5.0.0'
 
+gem 'country_select'
+
 gem 'closeio'
+
+#need this with carrierwave for ckeditor
+gem 'mini_magick'
 
 
 group :development do
