@@ -4,11 +4,16 @@
   <%= current_user.first_name %> <%= current_user.last_name %>
 </p>
   <p class="blog-post">
-    <%= f.label :'blog post' %><br>
-    <%= f.text_area :body, :class => 'form-control' %>
+    <%= f.label :'Write your response to this goal below:' %><br>
+    <div>
+    <%= f.cktext_area :body, rows: 10 %>
+  </div>
   </p>
   <p>
     <%= f.submit "Submit To This Goal", :class => 'btn btn-lg' %>
   </p>
 <% end %>
+
+
+
 
