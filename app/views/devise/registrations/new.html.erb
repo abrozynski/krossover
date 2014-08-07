@@ -3,33 +3,41 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :first_name %><br />
-  <%= f.text_field :first_name %></div>
+<br />
+  <div><%= f.label :first_name %>
+  <%= f.text_field :first_name, placeholder: 'ex: Joe' %></div>
 
-  <div><%= f.label :last_name %><br />
-  <%= f.text_field :last_name %></div>
+<br />
+  <div><%= f.label :last_name %>
+  <%= f.text_field :last_name, placeholder: 'ex: Jones' %></div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+<br />
+  <div><%= f.label :email %>
+  <%= f.email_field :email, autofocus: true, placeholder: 'ex: jones@gmail.com' %></div>
 
+<br />
     <div><%= f.label :picture %><br />
   <%= f.file_field :picture %></div>
 
-  <div><%= f.label :school_name %><br />
-  <%= f.text_field :school_name %></div>
+<br />
+  <div><%= f.label :school_name %>
+  <%= f.text_field :school_name, placeholder: 'Krossover High School' %></div>
 
-  <div><%= f.label :sport %><br />
+<br />
+  <div><%= f.label :sport %>
   <%= f.select :sport, options_for_select([["Basketball", "Basketball"], ["Volleyball","Volleyball"], ["Lacrosse","Lacrosse"], ["Football","Football"]])%></div>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+<br />
+  <div><%= f.label :password %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: 'Must be 8 characters' %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+<br />
+  <div><%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Retype your password' %></div>
 
 
-
-  <div><%= f.submit "Sign up" %></div>
+</br>
+  <div><%= f.submit "Sign up", :class => "btn btn-large" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
