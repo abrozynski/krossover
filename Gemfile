@@ -79,6 +79,8 @@ gem 'closeio'
 #need this with carrierwave for ckeditor
 gem 'mini_magick'
 
+gem 'valid_email', :require => 'valid_email/email_validator'
+
 
 group :development do
 	gem 'better_errors'

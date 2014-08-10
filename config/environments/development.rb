@@ -34,6 +34,7 @@ YAML.load(File.read('config/environments/local_env.yml')).each {|k, v|  ENV[k.to
     user_name: ENV["EMAIL_REFERRAL_SENDER_USER_NAME"], 
     password: ENV["EMAIL_REFERRAL_SENDER_PASSWORD"]  
 #these authentication needs to be modified 
+
 }
   
 
