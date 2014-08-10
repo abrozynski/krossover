@@ -1,13 +1,16 @@
 <div class="goal-page">
    
   <p>
-		<strong>Goal Submitted To</strong>
+		<strong>Goal Submitted To:</strong>
 		<%= Article.find(@comment.article_id).title %>
 	</p>
 
    <p>
 	  <strong>Commenter Name:</strong>
-	   <%= current_user.first_name %> <%= current_user.last_name %>
+	   <a href='/' + '#{@comment.user_id}'> <%= @comment.commenter %> </a>
+ <!-- can we fix this to link back to the users profile? -->
+
+	   
 	</p>
 	 
 	<p>

@@ -29,6 +29,10 @@
   <%= f.select :sport, options_for_select([["Basketball", "Basketball"], ["Volleyball","Volleyball"], ["Lacrosse","Lacrosse"], ["Football","Football"]])%></div>
 
 <br />
+  <div><%= f.label :bio %>
+  <%= f.text_area :bio, max_length: 100, rows: 5, placeholder: 'Tell us a little about you and your coaching career (max 100 characters)' %></div>
+
+<br />
   <div><%= f.label :password %>
     <%= f.password_field :password, autocomplete: "off", placeholder: 'Must be 8 characters' %></div>
 

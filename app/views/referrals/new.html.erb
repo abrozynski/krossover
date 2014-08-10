@@ -8,7 +8,7 @@
 <%= simple_form_for ([@referral]), :html => { :mulitpart => true } do |f| %>
 
  
-  <h3> Please, tell us about who you are referring to use Krossover! </h3>
+  <h3> Please, tell us about who you are referring to use Krossover: </h3>
 
    <div> </br>
   <%= f.text_field :name, placeholder: 'First Name' %></div>
@@ -25,7 +25,7 @@
    <div>  </br>
   <%= f.text_field :school, placeholder: 'School' %></div>
 
-   <div>  </br> <%= f.label :what_do_they_coach? %>
+   <div>  </br> <%= f.label :what_sport_do_they_coach? %>
   <%= f.select :sport, options_for_select([["Basketball", "Basketball"], ["Volleyball","Volleyball"], ["Lacrosse","Lacrosse"], ["Football","Football"]])%>
 </div>
 

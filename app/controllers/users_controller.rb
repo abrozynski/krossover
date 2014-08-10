@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       comments_array = []
       comments.each do |f|
         comment_info ={}
-        comment_info['feed_text'] = f.commenter + ' submitted to a goal'
+        comment_info['feed_text'] = f.commenter + ' submitted to ' + Article.find(f.article_id).title
         comment_info['link'] = '../comments/' + f.id.to_s
         comment_info['time_stamp'] = f.updated_at
         comments_array<<comment_info
