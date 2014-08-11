@@ -3,12 +3,30 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
+
+  <br />
+  <div><%= f.label :first_name %>
+  <%= f.text_field :first_name, placeholder: 'ex: Joe' %></div>
+
+<br />
+  <div><%= f.label :last_name %>
+  <%= f.text_field :last_name, placeholder: 'ex: Jones' %></div>
+
+<br />
+    <div><%= f.label :picture %><br />
+  <%= f.file_field :picture %></div>
+
+<br />
+  <div><%= f.label :school_name %>
+  <%= f.text_field :school_name, placeholder: 'Krossover High School' %></div>
+
+<br />
+  <div><%= f.label :bio %>
+  <%= f.text_area :bio, max_length: 100, rows: 5, placeholder: 'Tell us a little about you and your coaching career (max 100 characters)' %></div>
 
   <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
@@ -19,9 +37,11 @@
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
+
+
   <% if current_user.admin? %>
-   <div><%= f.label :kredits %>
-     <%= f.text_field :kredits %>
+   <div><%= f.label :kredit %>
+     <%= f.text_field :kredit %></div>
   <% end %>
 
 

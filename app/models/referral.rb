@@ -1,4 +1,4 @@
-
+#need to make message if email or name incorrect or left blank
 
 class Referral < ActiveRecord::Base
 	belongs_to  :user

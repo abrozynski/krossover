@@ -1,11 +1,23 @@
 <h1>Refer a coach </h1>
 <hr >
 
+
 <p>Tell your fellow coaches about this and earn extra kredits!</p>
 
 <hr >
 
 <%= simple_form_for ([@referral]), :html => { :mulitpart => true } do |f| %>
+
+ <% if @referral.errors.any? %>
+  <div class="alert alert-error">
+    <h2><%= pluralize(@referral.errors.count, "error") %> prohibited
+      this referral from being sent:</h2>
+    <ul>
+    <% @referral.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+ <% end %>
+</div>
 
  
   <h3> Please, tell us about who you are referring to use Krossover: </h3>
@@ -37,6 +49,8 @@
 <p>  <%= link_to 'Back', root_path %></p>
 
 <% end %>
+
+
 
 
    

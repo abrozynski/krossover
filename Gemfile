@@ -81,6 +81,8 @@ gem 'mini_magick'
 
 gem 'valid_email', :require => 'valid_email/email_validator'
 
+gem 'httparty'
+
 
 group :development do
 	gem 'better_errors'
