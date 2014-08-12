@@ -1,42 +1,18 @@
 <h1>Welcome to Krossover Kredit</h1>
- 
-<!--<% if user_signed_in? == true %>
-    <p>
-	  <strong>Hello</strong>
-	  <%= current_user.first_name %><%= current_user.last_name %>
-	</p>
-	 
-	<p>
-	  <strong>Kredit:</strong>
-#should have been a kredit thing here!!!!
-	</p>
- <%= link_to 'sign out', destroy_user_session_path, method: :delete %>
 
-<hr>
-<% else %>
-
- <%= link_to 'Atricles', controller: 'articles' %>
- <%= link_to 'sign in', new_user_session_path %>
- <%= link_to 'Register', new_user_registration_path %>
- <% if  current_user.admin? %>
-  <%= link_to 'Edit', edit_users_path(@user) %>
- <% end %>
-<% end %>
--->
-
-                                                
+<hr>                                                 
 <div style="line-height: 200px">
 	<p style="line-height: 30px;">As a member of the Krossover rewards program you can earn discounts on a variety of products including your future video break downs. Three easy rules to the game:</p>
                                                   <ol>
-                                                    <b><li><p><%= link_to 'Complete a goal', controller: 'articles' %></p>
-</li></b></a>
-                                                    <b><li><a href="/users"><p>Check your kredits</p></a></li></b>
-                                                   <b><li> <a href="/rewards"><p>Claim a reward!</p></a></li></b>
+                                                    <li><p><%= link_to 'Complete a goal', controller: 'articles' %></p>
+</li></a>
+                                                    <li><a href="/users"><p>Check your kredits</p></a></li>
+                                                   <li> <a href="/rewards"><p>Claim a reward</p></a></li>
                                                   </ol>
 	<div>
 		
 		<p style="line-height: 30px;">For questions about Krossover Kredit, please contact:
-			<br><a href="mailto:sales@krossover.com" style="color:#fb4428" target="_blank">sales@krossover.com</a></p>
+			<a href="mailto:sales@krossover.com" style="color:#fb4428" target="_blank">sales@krossover.com</a></p>
 
 
 	</div>
