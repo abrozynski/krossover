@@ -1,25 +1,12 @@
 
 <div class="goal-page">
-    <p>
-	  <strong>Goal Name:</strong>
-	  <%= @article.title %>
-	</p>
-	 
-	<p>
-	  <strong>Description:</strong>
-	  <%= @article.text %>
-	</p>
+  <h2> <%= @article.title %></h2> 
+  <hr>
+	<p><%= @article.text %></p>
 
-		<p>
-	  <strong>Date:</strong>
-	  <%= @article.date %>
-	</p>
+	<p> Due Date: <%= @article.date %> </p>   
+	<p>Kredits:  <%= @article.kredit %></p>
 
-		<p>
-	  <strong>Kredit:</strong>
-	  <%= @article.kredit %>
-	</p>
-<hr>
 <!-- <p><strong>Submissions</strong></p>
 <%= render @article.comments %> -->
 

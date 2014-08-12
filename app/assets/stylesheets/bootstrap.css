@@ -238,10 +238,6 @@ body {
 
 }
 
-.goal-page {
-  padding-top: 60px
-}
-
 a {
   color: #0088cc;
   text-decoration: none;
@@ -5571,9 +5567,10 @@ input[type="submit"].btn.btn-mini {
 }
 
 .thumbnails {
-  margin-left: -20px;
+  margin-left: 0px;
   list-style: none;
   *zoom: 1;
+  margin-top: -25px;
 }
 
 .thumbnails:before,
