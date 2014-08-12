@@ -1,25 +1,20 @@
 <div class="goal-page">
    
-  <p>
-		<strong>Goal Submitted To:</strong>
-		<%= Article.find(@comment.article_id).title %>
+  <h4>Goal Submitted To:</h4>
+		<p><%= Article.find(@comment.article_id).title %>
 	</p>
 
-   <p>
-	  <strong>Commenter Name:</strong>
+   <h5>Coach Name:</h5>
 	   <a href='/' + '#{@comment.user_id}'> <%= @comment.commenter %> </a>
  <!-- can we fix this to link back to the users profile? -->
 
-	   
-	</p>
 	 
-	<p>
-	  <strong>Comment:</strong>
+	<h5>Coach Submission:</h5>
 	  <%= raw(@comment.body) %>
-	</p>
-
+	
 
 <br />
+<hr>
 <div>
 	<%= social_share_button_tag(@comment.body) %>
 </div>
