@@ -19,7 +19,7 @@
  */
 
 #header {
-height: 50px;
+height: 20px;
 }
 
 #headerbuttons {
@@ -48,7 +48,8 @@ height: 50px;
 #divFooter{
   background-color: rgb(21,106,175);
   color: rgb(255, 255, 255);
-  font-family: Futura;
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+  font-weight: 500;
   text-transform: none;
   font-size: 12px;
   letter-spacing: 0px; 
@@ -69,11 +70,12 @@ height: 50px;
 
 #divFooter a{
   color: rgb(227, 227, 227);
-   text-align: center; 
-   font-family: Futura; 
-   font-size: 12px;
-    line-height: 22px; 
-    margin: 0 auto;
+  text-align: center; 
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px; 
+  margin: 0 auto;
   }
 
 #divFooter h3{

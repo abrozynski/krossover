@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       articles_array =[]
       articles.each do |f|
         article_info ={}
-        article_info['feed_text']='A new goal has been created:' + f.title
+        article_info['feed_text']='A new goal has been posted: ' + f.title
         article_info['time_stamp']=f.created_at
         article_info['link'] = '../goals/' + f.id.to_s
         articles_array<<article_info

@@ -229,17 +229,15 @@ textarea {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+ /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
   padding-top: 60px;
 
-}
-
-.goal-page {
-  padding-top: 60px
 }
 
 a {
@@ -782,28 +780,32 @@ h3 {
 
 h1 {
   font-size: 38.5px;
-  font-family: futura; 
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+  font-weight: 500;
   color: rgb(47, 47, 47);
 }
 
 h2 {
   font-size: 31.5px;
-  font-family: futura;
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+  font-weight: 500;
 }
 
 h3 {
   font-size: 24.5px;
-  font-family: futura;
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+  font-weight: 500;
 }
 
 h4 {
   font-size: 17.5px;
-  font-family: futura;
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+  font-weight: 500;
 }
 
 h5 {
   font-size: 14px;
-  font-family: futura;
+  font-family: "franklin-gothic-urw-cond",sans-serif;
 }
 
 h6 {
@@ -1089,7 +1091,9 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+  font-size: 16px;
 }
 
 label {
@@ -4648,7 +4652,9 @@ input[type="submit"].btn.btn-mini {
   padding: 0px 35px 10px;
   padding-left: 20px;
   color: rgb(47, 47, 47);
-  font-family: Futura;
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+  font-weight: 500;
+
   text-decoration: none;
   text-shadow: 0 0px 0 #ffffff;
   display: table;
@@ -5571,9 +5577,10 @@ input[type="submit"].btn.btn-mini {
 }
 
 .thumbnails {
-  margin-left: -20px;
+  margin-left: 0px;
   list-style: none;
   *zoom: 1;
+  margin-top: -25px;
 }
 
 .thumbnails:before,

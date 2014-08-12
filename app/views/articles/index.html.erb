@@ -1,10 +1,24 @@
 <h1>Latest Goals</h1>
  
  <hr >
- <p>In Krossover Kredits you can earn rewards on completed goals. See details below. </p>
+ <p>In Krossover Kredit you can earn rewards by completing goals. See details on each goal below. </p>
 
 <hr >
 
+      <% @articles.each do |article| %>
+    <div class="thumbnails">
+        <div class="caption">
+          <h3><%= article.title %></h3>
+          <p><%= article.text %></p>
+          <p>Due Date: <%= article.date %></p>
+          <p>Kredits: <%= article.kredit %></p>
+          <p><%= link_to 'Check Out This Goal', article, :class => "btn btn-primary" %></p>
+          <hr>
+        </div>
+      </div>
+      <% end %>
+    
+<!-- 
 <table class="table table-striped">
   <tr>
     <th>Goal Name</th>
@@ -24,5 +38,5 @@
     </tr>
     <% end %>
 </table>
-
+ -->
 

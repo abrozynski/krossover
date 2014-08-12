@@ -1,5 +1,10 @@
-<div class="goal-page">
+<div class="reward-page">
 <p id="notice"><%= notice %></p>
+
+    <div class="reward-image">      
+        <%= image_tag(@reward.image_url, :width => 600) if @reward.image.present? %>
+         <%= image_tag("krossover-reward.jpg", :width => 600) if @reward.image.blank? %>
+    </div>
 
 <p>
   <strong>Title:</strong>
@@ -16,15 +21,10 @@
   <%= @reward.kredit %>
 </p>
 
-<p>
-	<strong>Image</strong>
-	<%= image_tag(@reward.image_url, :width => 600) if @reward.image.present? %>
-	</p>
-
 <hr>
 <p>
 <%= render "claims/form" %>
 </p>
-
-<%= link_to 'Back', rewards_path %>
+<!--
+<%= link_to 'Back', rewards_path %>-->
 </div>

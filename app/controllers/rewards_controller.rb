@@ -7,7 +7,8 @@ class RewardsController < ApplicationController
   # GET /rewards
   # GET /rewards.json
   def index
-    @rewards = Reward.all
+    @rewards = Reward.all.order(kredit: :desc).take(10)
+
   end
 
   # GET /rewards/1

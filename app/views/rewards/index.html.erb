@@ -2,10 +2,30 @@
 
 <hr >
 
-<p>In Krossover Kredits you can earn rewards after completing goals. See rewards to win below.</p>
+<p>In Krossover Kredit you can earn rewards after completing goals. See rewards to win below.</p>
 
 <hr>
 
+
+      <% @rewards.each do |reward| %>
+    <div class="thumbnails">
+
+      <%= image_tag(reward.image, :class => "reward-thumb") %>
+
+
+        <div class="caption">
+          <h3><%= reward.title %></h3>
+          <p><%= reward.description %></p>
+          <p>Kredits: <%= reward.kredit %></p>
+          <p><%= link_to 'Claim This Reward', reward, :class => "btn btn-primary" %></p>
+          <hr>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+
+<!-- 
 <table class="table table-striped">
   <thead>
     <tr>
@@ -27,5 +47,5 @@
     <% end %>
   </tbody>
 </table>
-
+ -->
 <br>

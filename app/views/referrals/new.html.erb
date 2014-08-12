@@ -15,9 +15,11 @@
     <ul>
     <% @referral.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
+
     <% end %>
+    </div>
+
  <% end %>
-</div>
 
  
   <h3> Please, tell us about who you are referring to use Krossover: </h3>
@@ -43,7 +45,7 @@
 
 
 </br>
-  <div><p><%= f.submit "Refer This Coach", :class => 'btn btn-lg' %></p></div>
+  <div><p><%= f.submit "Refer This Coach", :class => 'btn btn-lg btn-primary' %></p></div>
 
 
 <p>  <%= link_to 'Back', root_path %></p>
