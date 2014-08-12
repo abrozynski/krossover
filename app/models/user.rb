@@ -7,7 +7,7 @@ has_many :rewards, through: :claims
 
 mount_uploader :picture, ImageUploader
 
-before_validation :email_checker
+#before_validation :email_checker
 
 
 # class Lead
