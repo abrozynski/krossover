@@ -4,45 +4,45 @@ class RegistrationsController < Devise::RegistrationsController
 #second try at email check with API is below 
 
 
-      def email_checker(email)
+    #   def email_checker(email)
         
-      #   api_options = {
-      # #     query: :output => 'json',
-      # #     format: :json,
-      #     base_uri: 'app.close.io',
-      #     basic_auth: "d4a4d51ccccfddb1b45ac8967d43989f5a4db6efe538715b1660d8ad:", ' '
-      # }
+    #   #   api_options = {
+    #   # #     query: :output => 'json',
+    #   # #     format: :json,
+    #   #     base_uri: 'app.close.io',
+    #   #     basic_auth: "d4a4d51ccccfddb1b45ac8967d43989f5a4db6efe538715b1660d8ad:", ' '
+    #   # }
     
-        @response = HTTParty.get("https://app.close.io/api/v1/contact/",basic_auth: { username: "d4a4d51ccccfddb1b45ac8967d43989f5a4db6efe538715b1660d8ad:"}) 
-        @email_database = []
-        @response['data'].each do |x| 
-          x['emails'].each do |contact_info|
-              @email_database << contact_info['email']
-            end
-        end
+    #     @response = HTTParty.get("https://app.close.io/api/v1/contact/",basic_auth: { username: "d4a4d51ccccfddb1b45ac8967d43989f5a4db6efe538715b1660d8ad:"}) 
+    #     @email_database = []
+    #     @response['data'].each do |x| 
+    #       x['emails'].each do |contact_info|
+    #           @email_database << contact_info['email']
+    #         end
+    #     end
 
-        # ENV["API_KEY"]
-        #YAML.load(File.read('config/environments/local_env.yml')).each {|k, v|  ENV[k.to_s] = v}
+    #     # ENV["API_KEY"]
+    #     #YAML.load(File.read('config/environments/local_env.yml')).each {|k, v|  ENV[k.to_s] = v}
 
-        unless @email_database.include? email 
-            return false
-        else
-            return true 
-        end
-      end
+    #     unless @email_database.include? email 
+    #         return false
+    #     else
+    #         return true 
+    #     end
+    #   end
 
 
-    def create
-        super 
+    # def create
+    #     super 
         
-        if email_checker(params[:email]) == false 
+    #     if email_checker(params[:email]) == false 
 
-            redirect_to users_path, flash: {info: "I'm sorry, it doesn't look like you're a Krossover cutsomter" } and return 
-            #and return to signup with errors
-        else 
-            User.save!
-        end
-    end
+    #         redirect_to users_path, flash: {info: "I'm sorry, it doesn't look like you're a Krossover cutsomter" } and return 
+    #         #and return to signup with errors
+    #     else 
+    #         User.save!
+    #     end
+    # end
 
 
 

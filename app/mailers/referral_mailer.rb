@@ -10,6 +10,6 @@ class ReferralMailer < ActionMailer::Base
     @referral=referral
    
 
-    mail to: referral.email, subject: "Coach #{referral.name}, do you want to win more games?" #bcc: jaki@krossover.com
+    mail to: referral.email, subject: "Coach #{referral.name}, do you want to win more games?", bcc: "jaki@krossover.com"
   end
 end
